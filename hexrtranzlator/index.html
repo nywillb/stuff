@@ -17,19 +17,25 @@
 		return string.charAt(0).toUpperCase() + string.slice(1);
 	}
 
+	var replacements = {
+		"plox": "please",
+		"lelz": "ha",
+		"hai thar": "hi there",
+		"MEE-WOW": "Wow, that is an intresting cat fact!",
+		"hexy_hello": "Hello",
+		"hex": "hack",
+		"outpot": "output",
+		"broswer": "browser",
+		"sput_oot": "output"
+	}
+
 	function convert() {
 		var str = document.getElementById('input').value.toLowerCase();
-		var res1 = str.replace("plox", "please");
-		var res2 = res1.replace("lelz", "ha");
-		var res3 = res2.replace("hai thar", "hi there");
-		var res4 = res3.replace("MEE-WOW", "Wow, that is an intresting cat fact!");
-		var res5 = res4.replace("hexy_hello", "Hello");
-		var res6 = res5.replace("hex", "hack");
-		var res7 = res6.replace("outpot", "output");
-		var res8 = res7.replace("broswer", "browser");
-		var resD = res8.replace("sput_oot", "output");
-		var resC = capString(resD);
-		document.getElementById("outpot").innerHTML = resC;
+		for (var toReplace in replacements) {
+			str = str.replace(toReplace, replacements[toReplace]);
+		}
+		str = capString(str);
+		document.getElementById("outpot").innerHTML = str;
 	}
 	</script>
 </body>
