@@ -6,31 +6,31 @@
 </head>
 <body>
 	<h1 style="text-align:center">HEXR TRANZLATOR</h1>
-	<p style="text-align:center">Chances are you do not know what this means.
-		<div style="padding-top:5%; text-align:center">
-			<input type="text" name="input" id="input">
-			<button onclick="convert()" class="btn btn-primary">Translate</button>
-			<p id="outpot">Please type something in the box above</p>
-		</div>
-		<script>
-		function capString(string){
-			return string.charAt(0).toUpperCase() + string.slice(1);
-		}
+	<p style="text-align:center">Chances are you do not know what this means.</p>
+	<div style="padding-top:5%; text-align:center">
+		<input type="text" name="input" id="input">
+		<button onclick="convert()" class="btn btn-primary">Translate</button>
+		<p id="outpot">Please type something in the box above</p>
+	</div>
+	<script>
+	function capString(string){
+		return string.charAt(0).toUpperCase() + string.slice(1);
+	}
 
-		function convert() {
-			var str = document.getElementById('input').value.toLowerCase();
-			var res1 = str.replace("plox", "please");
-			var res2 = res1.replace("lelz", "ha");
-			var res3 = res2.replace("hai thar", "hi there");
-			var res4 = res3.replace("MEE-WOW", "Wow, that is an intresting cat fact!");
-			var res5 = res4.replace("hexy_hello", "Hello");
-			var res6 = res5.replace("hex", "hack");
-			var res7 = res6.replace("outpot", "output");
-			var res8 = res7.replace("broswer", "browser");
-			var resD = res8.replace("sput_oot", "output");
-			var resC = capString(resD);
-			document.getElementById("outpot").innerHTML = resC;
-		}
-		</script>
-	</body>
-	</html>
+	function convert() {
+		var str = document.getElementById('input').value.toLowerCase();
+		var res1 = str.replace("plox", "please");
+		var res2 = res1.replace("lelz", "ha");
+		var res3 = res2.replace("hai thar", "hi there");
+		var res4 = res3.replace("MEE-WOW", "Wow, that is an intresting cat fact!");
+		var res5 = res4.replace("hexy_hello", "Hello");
+		var res6 = res5.replace("hex", "hack");
+		var res7 = res6.replace("outpot", "output");
+		var res8 = res7.replace("broswer", "browser");
+		var resD = res8.replace("sput_oot", "output");
+		var resC = capString(resD);
+		document.getElementById("outpot").innerHTML = resC;
+	}
+	</script>
+</body>
+</html>
